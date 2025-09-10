@@ -8,9 +8,9 @@ El flujo de trabajo incluye la creación de un dataset desafiante, el preprocesa
 ---
 
 ## Dataset
-El proyecto se inició con un dataset de 200 notas clínicas. Para simular un escenario más realista y evitar que los modelos alcanzaran métricas "perfectas" engañosas, el conjunto de datos fue aumentado a 455 registros utilizando IA. Este nuevo dataset introdujo mayor variabilidad lingüística y ambigüedad, forzando a los modelos a desarrollar una comprensión semántica más profunda.
+El proyecto se inició con un dataset de 200 notas clínicas. Para simular un escenario más realista y evitar que los modelos alcanzaran métricas "perfectas" engañosas, el conjunto de datos fue aumentado a 455 registros utilizando IA. Este nuevo dataset introdujo mayor variabilidad lingüística y ambigüedad, forzando a los modelos a desarrollar una comprensión semántica más profunda. El dataset final presenta una distribución relativamente balanceada, lo cual es fundamental para entrenar un clasificador sin sesgos hacia la clase mayoritaria.
 
-# Preprocesamiento
+## Preprocesamiento
 
  - Limpieza de caracteres especiales y puntuación.
 
@@ -19,3 +19,24 @@ El proyecto se inició con un dataset de 200 notas clínicas. Para simular un es
  - Eliminación de stopwords (palabras comunes sin valor semántico).
 
  - Aplicación de stemming para reducir las palabras a su raíz.
+
+---
+
+## Modelos Comparados
+Se implementaron tres familias de modelos para evaluar la evolución de las técnicas de NLP:
+
+**1.Modelos Clásicos (Bag-of-Words):**
+
+ - Vectorización: TF-IDF (Term Frequency-Inverse Document Frequency).
+
+ - Clasificadores: Naive Bayes y Random Forest. Estos modelos basan sus predicciones en la frecuencia de las palabras, sin capturar el contexto.
+
+**2.Word Embeddings:**
+
+ - Vectorización: Word2Vec, que crea representaciones vectoriales densas de las palabras, capturando algunas relaciones semánticas.
+
+ - Clasificador: Random Forest.
+
+**3.Transformers:**
+
+ - Modelo: Fine-tuning de distilbert-base-multilingual-cased, una arquitectura de vanguardia que procesa el texto de manera contextual, entendiendo el significado de las palabras según su posición y relación en la oración.
