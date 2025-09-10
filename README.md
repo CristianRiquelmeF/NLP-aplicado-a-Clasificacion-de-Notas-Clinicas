@@ -1,3 +1,4 @@
+
 # Clasificación de Notas Clínicas con NLP y Enfoque Ético
 
 ## Resumen
@@ -40,3 +41,50 @@ Se implementaron tres familias de modelos para evaluar la evolución de las téc
 **3.Transformers:**
 
  - Modelo: Fine-tuning de distilbert-base-multilingual-cased, una arquitectura de vanguardia que procesa el texto de manera contextual, entendiendo el significado de las palabras según su posición y relación en la oración.
+
+---
+
+## Resultados
+
+Para un uso en producción, el modelo BERT es claramente la mejor elección por su capacidad de generalización.
+
+<img width="830" height="138" alt="image" src="https://github.com/user-attachments/assets/eb9212fd-63a9-4958-a23d-b33c69d2d4f2" />
+
+
+Los resultados demostraron una clara superioridad de la arquitectura Transformer, que fue capaz de entender los matices del lenguaje clínico que los otros modelos no pudieron capturar.
+
+- Matriz de confusión qeu muestra las clasificaciones realizadas por el modelo.
+<img width="600" height="556" alt="image" src="https://github.com/user-attachments/assets/3311755e-fd4e-4a6c-910b-4c7853b4fe73" />
+
+**Tabla de Predicciones de Ejemplo**
+ - La siguiente tabla ilustra cómo el modelo DistilBERT clasifica correctamente notas clínicas, incluso cuando la gravedad no es explícita.
+
+<img width="600" height="248" alt="image" src="https://github.com/user-attachments/assets/1d92a7e9-d796-4813-b2bb-58075c89be76" />
+
+---
+
+## Conclusiones 
+
+**Responsabilidad en el Despliegue:**
+
+- Herramienta de Apoyo, no Oráculo: Un modelo de IA debe ser una herramienta para asistir al personal clínico, no para reemplazar su juicio. Su función es priorizar y señalar, pero la decisión final siempre debe ser humana.
+
+- Monitorización Continua: Es crucial vigilar la calidad de los datos de entrada para evitar que sesgos demográficos o sociales (sobrerrepresentación de ciertos grupos) afecten negativamente la equidad del modelo. Un sistema sesgado puede perpetuar desigualdades en la atención sanitaria.
+
+- En conclusión, la implementación de IA en salud exige un escepticismo crítico. La excelencia técnica debe ir siempre acompañada de un marco ético robusto que garantice la seguridad, justicia y fiabilidad del sistema.
+
+---
+
+## Librerías principales
+  - pandas
+  - numpy
+  - matplotlibseabornnltk
+  - re
+  - scikit-learn
+  - gensim
+  - transformers
+  - tensorflow
+
+---
+> Proyecto desarrollado como parte de portafolio de Machine Learning avanzado.
+---
