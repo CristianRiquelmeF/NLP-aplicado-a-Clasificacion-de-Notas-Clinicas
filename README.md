@@ -1,5 +1,5 @@
 
-[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/16VRGy75OV2RMYxVByjGadsZHHkhvdM6U?authuser=2#scrollTo=6XhRJ90E2nhn)
+[![Open In Colab](https://colab.research.google.com/assets/colab-badge.svg)](https://colab.research.google.com/drive/16VRGy75OV2RMYxVByjGadsZHHkhvdM6U?authuser=2#scrollTo=2vNOP_5nWyII)
 
 # Clasificación de Notas Clínicas con NLP y Enfoque Ético
 
